@@ -3,7 +3,7 @@ Overview
 This repository contains the code, dataset, and resources for the paper "Advancing Conversational AI with Shona Slang: A Dataset and Hybrid Model for Digital Inclusion" (arXiv: ["pending approval"]). The project addresses the underrepresentation of African languages in NLP by introducing a novel Shona–English slang dataset and a hybrid chatbot combining a fine-tuned DistilBERT classifier (96.4% accuracy, 96.3% F1-score) with retrieval-augmented generation (RAG). The chatbot supports culturally relevant dialogues in Shona slang, demonstrated through a use case assisting prospective students with graduate program queries at Pace University.
 The dataset and model are publicly available to promote digital inclusion and advance NLP for low-resource African languages. This work was conducted at Pace University, Seidenberg School of Computer Science and Information Systems, under the supervision of Krishna Bathula, Ph.D.
 Dataset
-The Shona–English slang dataset (shona_slang_dataset.json) comprises ~34000 utterances curated from anonymized social media conversations, annotated for:
+The Shona–English slang dataset (shona_dataset_with_contexts_and_intents.csv) comprises ~34000 utterances curated from anonymized social media conversations, annotated for:
 
 Intent: Greeting, gratitude, request, religious query, finance, education, farewell.
 Sentiment: Positive, negative, neutral.
@@ -22,9 +22,8 @@ Example:
   "tone": "Friendly"
 }
 
-
-Access: Download from data/shona_slang_dataset.json or via Hugging Face.
-License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+Code
+the Final code for the chatbot and model is (slang_model&chatbot.ipynb)
 
 Model
 The fine-tuned DistilBERT classifier (distilbert-base-multilingual-cased) achieves 96.4% accuracy on intent recognition. It is integrated into a hybrid chatbot with:
@@ -58,9 +57,6 @@ pip install -r requirements.txt
 
 
 Download Dataset:
-
-Located in data/shona_slang_dataset.json.
-Alternatively, download from Hugging Face.
 
 
 Run the Chatbot:
@@ -102,12 +98,12 @@ If you use this dataset, model, or code, please cite:
   author = {Masoka, Happymore},
   title = {Advancing Conversational AI with Shona Slang: A Dataset and Hybrid Model for Digital Inclusion},
   year = {2025},
-  note = {arXiv preprint arXiv:[Insert arXiv ID or "pending"]}
+  note = {arXiv preprint arXiv:["pending"]}
 }
 
 Future Work
 
-Expand dataset with more utterances and intents.
+
 Integrate audio inputs for multimodal dialogue.
 Enhance RAG with domain-adaptive retrieval.
 Conduct human-in-the-loop evaluations.
@@ -115,4 +111,4 @@ Conduct human-in-the-loop evaluations.
 Acknowledgments
 This work was conducted at Pace University under the supervision of Krishna Bathula, Ph.D. We thank the Seidenberg School of Computer Science and Information Systems for support and the Masakhane community for feedback.
 Contact
-For questions or collaboration, contact happymore masoka at [your email] or join the Masakhane Slack (https://masakhane.io/slack/).
+For questions or collaboration, contact happymore masoka at [hm78761n@pace.edu] or join the Masakhane Slack (https://masakhane.io/slack/).
